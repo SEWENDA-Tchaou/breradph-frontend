@@ -9,7 +9,7 @@ function Footer () {
     const [email, setEmail] = useState("");
 
     // const handleSubmit = () =>{
-        // axios.post("http://localhost:3000/newsletter", {email, })
+        // axios.post("https://breradph-bac.vercel.app/newsletter", {email, })
         // .then(res => {console.log(res);})
         // .catch(err => console.log(err)); 
         const handleSubmit = ()=>{
@@ -20,7 +20,7 @@ function Footer () {
             let config = {
               method: 'post',
               maxBodyLength: Infinity,
-              url: 'http://localhost:3000/newsletter',
+              url: 'https://breradph-bac.vercel.app/newsletter',
             //   headers: { 
             //     ...data.getHeaders()
             //   },

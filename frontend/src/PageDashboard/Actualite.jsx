@@ -18,7 +18,7 @@ function Actualite() {
   }, []);
 
   const getContents = async() => {
-    const response = await axios.get("http://localhost:3000/actu");
+    const response = await axios.get("https://breradph-bac.vercel.app/actu");
     console.log(response.data)
     setContenuSite(response.data);
   };
@@ -37,7 +37,7 @@ function Actualite() {
         formData.append("theme1", theme1);
         formData.append("lireTout1", lireTout1);
     try {
-      await axios.post("http://localhost:3000/actu", formData, {
+      await axios.post("https://breradph-bac.vercel.app/actu", formData, {
         headers:{
           "Content-type": "multipart/form-data"
         }
@@ -51,7 +51,7 @@ function Actualite() {
   // suppression du contenu
   const deleteContent = async(contentId) => {
     try {
-      await axios.delete(`http://localhost:3000/actu/${contentId}`);
+      await axios.delete(`https://breradph-bac.vercel.app/actu/${contentId}`);
       getContents();
     }catch(error){
       console.log(error);
@@ -72,7 +72,7 @@ function Actualite() {
           <h1 className='text-center text-3xl my-2 text-blanc font-bold'>Actualites</h1>
           <div className="  bg-yellow2 mx-12 mb-2 rounded-xl shadow-xl py-5">
             <div className="">
-              <h3 className=' mb-3 text-xl font-bold text-center'>Publier votre actualite ici</h3>
+              <h3 className=' mb-3 text-xl font-bold text-center'>Publier votre actualite ici M</h3>
               <form  
               onSubmit={saveForm} 
               >

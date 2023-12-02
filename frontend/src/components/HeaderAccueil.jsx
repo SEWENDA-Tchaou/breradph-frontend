@@ -7,14 +7,14 @@ function HeaderAccueil() {
 
   // const Navigate = useNavigate("")
 //   useEffect(()=>{
-//       fetch("http://localhost:3000/pub")
+//       fetch("https://breradph-bac.vercel.app/pub")
 //       .then(res =>res.json())
 //       .then(data =>setContenuSite(data))
 //       .catch(err => console.log(err));
 //   }, [])
 
 // useEffect(()=>{
-//     fetch("http://localhost:3000/pub")
+//     fetch("https://breradph-bac.vercel.app/pub")
 //     .then(res =>res.json())
 //     .then(data =>setContactData(data))
 //     .catch(err => console.log(err));

@@ -9,7 +9,7 @@ function Newsletter() {
 
 
    useEffect(()=>{
-       fetch("http://localhost:3000/newsletter")
+       fetch("https://breradph-bac.vercel.app/newsletter")
        .then(res =>res.json())
        .then(data =>setContactData(data))
        .catch(err => console.log(err));
@@ -18,7 +18,7 @@ function Newsletter() {
    //supprimer a partir du bouton delete
   const handleDelete = async (id)=>{
     try{
-      await axios.delete("http://localhost:3000/newsletter/"+id)
+      await axios.delete("https://breradph-bac.vercel.app/newsletter/"+id)
       window.location.reload()
     }catch(err){
       console.log(err)

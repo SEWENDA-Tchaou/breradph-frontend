@@ -15,7 +15,7 @@ function TalkForUs() {
 
     const handleSubmit = ()=>{
         // event.preventDefault();
-        axios.post("http://localhost:3000/commentForUs", {name, email, phone, comment})
+        axios.post("https://breradph-bac.vercel.app/commentForUs", {name, email, phone, comment})
         .then(res => {console.log(res);
           Navigate("/");
         })

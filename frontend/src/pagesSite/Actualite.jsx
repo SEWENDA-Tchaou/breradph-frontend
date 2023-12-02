@@ -35,7 +35,7 @@ function Actualite() {
 //   const [data, setData] = useState([])
   
 //   useEffect(()=>{
-//       fetch("http://localhost:3000/actu")
+//       fetch("https://breradph-bac.vercel.app/actu")
 //       .then(res =>res.json())
 //       .then(data =>setData(data))
 //       .catch(err => console.log(err));

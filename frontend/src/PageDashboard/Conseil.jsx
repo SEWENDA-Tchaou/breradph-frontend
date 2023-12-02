@@ -20,7 +20,7 @@ function Btp() {
   }, []);
 
   const getContents = async() => {
-    const response = await axios.get("http://localhost:3000/conseil");
+    const response = await axios.get("https://breradph-bac.vercel.app/conseil");
     console.log(response.data)
     setContenuSite(response.data);
   };
@@ -33,7 +33,7 @@ function Btp() {
     formData.append("conseil2", conseil2);
     formData.append("conseil3", conseil3);
     try {
-      await axios.post("http://localhost:3000/conseil", formData, {
+      await axios.post("https://breradph-bac.vercel.app/conseil", formData, {
         headers:{
           "Content-type": "multipart/form-data"
         }
@@ -47,7 +47,7 @@ function Btp() {
   // suppression du contenu
   const deleteContent = async(contentId) => {
     try {
-      await axios.delete(`http://localhost:3000/conseil/${contentId}`);
+      await axios.delete(`https://breradph-bac.vercel.app/conseil/${contentId}`);
       getContents();
     }catch(error){
       console.log(error);

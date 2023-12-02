@@ -21,7 +21,7 @@ function ActualiteUpdate() {
   }, []);
 
   const getContents = async() => {
-    const response = await axios.get(`http://localhost:3000/actu/${id}`);
+    const response = await axios.get(`https://breradph-bac.vercel.app/actu/${id}`);
     setTexte(response.data.titre);
     setTheme(response.data.theme);
     setLireTout(response.data.themeTout);
@@ -43,7 +43,7 @@ function ActualiteUpdate() {
         formData.append("theme1", theme1);
         formData.append("lireTout1", lireTout1);
     try {
-      await axios.put(`http://localhost:3000/actu/${id}`, formData, {
+      await axios.put(`https://breradph-bac.vercel.app/actu/${id}`, formData, {
         headers:{
           "Content-type": "multipart/form-data"
         }

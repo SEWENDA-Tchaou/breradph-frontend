@@ -9,7 +9,7 @@ function Commentaires() {
 
 
    useEffect(()=>{
-       fetch("http://localhost:3000/afficheCommentaires")
+       fetch("https://breradph-bac.vercel.app/afficheCommentaires")
        .then(res =>res.json())
        .then(data =>setContactData(data))
        .catch(err => console.log(err));
@@ -18,7 +18,7 @@ function Commentaires() {
    //supprimer a partir du bouton delete
   const handleDelete = async (id)=>{
     try{
-      await axios.delete("http://localhost:3000/supCommentaires/"+id)
+      await axios.delete("https://breradph-bac.vercel.app/supCommentaires/"+id)
       window.location.reload()
     }catch(err){
       console.log(err)

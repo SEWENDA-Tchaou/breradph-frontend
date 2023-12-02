@@ -26,7 +26,7 @@ function Login({ visible}) {
     // let config = {
     //   method: 'post',
     //   maxBodyLength: Infinity,
-    //   url: 'http://localhost:3000/login',
+    //   url: 'https://breradph-bac.vercel.app/login',
     // //   headers: { 
     // //     ...data.getHeaders()
     // //   },
@@ -47,7 +47,7 @@ function Login({ visible}) {
     // });
     const handleSubmit = (e)=>{
       e.preventDefault();
-      axios.post('http://localhost:3000/login', values)
+      axios.post('https://breradph-bac.vercel.app/login', values)
       .then(res=>{
           console.log(res.data.Status)
           if(res.data.Status === "succes"){

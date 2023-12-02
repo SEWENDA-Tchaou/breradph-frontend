@@ -19,7 +19,7 @@ function Btp() {
   }, []);
 
   const getContents = async() => {
-    const response = await axios.get(`http://localhost:3000/conseil/${id}`);
+    const response = await axios.get(`https://breradph-bac.vercel.app/conseil/${id}`);
     setTitre(response.data.titre)
     setConseil1(response.data.conseil1);
     setConseil2(response.data.conseil2);
@@ -34,7 +34,7 @@ function Btp() {
     formData.append("conseil2", conseil2);
     formData.append("conseil3", conseil3);
     try {
-      await axios.put(`http://localhost:3000/conseil/${id}`, formData, {
+      await axios.put(`https://breradph-bac.vercel.app/conseil/${id}`, formData, {
         headers:{
           "Content-type": "multipart/form-data"
         }

@@ -9,7 +9,7 @@ function Contact () {
 //     const [data, setData] = useState([])
 
 //     useEffect(()=>{
-//       fetch("http://localhost:3000/conseil")
+//       fetch("https://breradph-bac.vercel.app/conseil")
 //       .then(res =>res.json())
 //       .then(data =>setData(data))
 //       .catch(err => console.log(err));

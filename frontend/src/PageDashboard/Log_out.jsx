@@ -6,7 +6,7 @@ function Log_out() {
   const [name, setName] = useState("");
 
   const handleLogout = () => {
-    axios.get("http://localhost:3000/logout")
+    axios.get("https://breradph-bac.vercel.app/logout")
     .then(res => {
       if(res.data.Status === "succes") {
         location.reload(true);

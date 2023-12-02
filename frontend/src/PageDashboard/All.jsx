@@ -9,7 +9,7 @@ function All() {
    // affichage des donnes de la table contacts
    const [contactData, setContactData] = useState([])
    useEffect(()=>{
-       fetch("http://localhost:3000/afficheContact")
+       fetch("https://breradph-bac.vercel.app/afficheContact")
        .then(res =>res.json())
        .then(data =>setContactData(data))
        .catch(err => console.log(err));
@@ -18,7 +18,7 @@ function All() {
    //supprimer a partir du bouton delete
   const handleDelete = async (id)=>{
     try{
-      await axios.delete("http://localhost:3000/supContact/"+id)
+      await axios.delete("https://breradph-bac.vercel.app/supContact/"+id)
       window.location.reload()
     }catch(err){
       console.log(err)

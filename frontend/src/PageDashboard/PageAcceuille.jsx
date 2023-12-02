@@ -8,7 +8,7 @@ function Hotel() {
   const [contenuSite, setContenuSite] = useState([])
   // const Navigate = useNavigate("")
   useEffect(()=>{
-      fetch("http://localhost:3000/pub")
+      fetch("https://breradph-bac.vercel.app/pub")
       .then(res =>res.json())
       .then(data =>setContenuSite(data))
       .catch(err => console.log(err));
@@ -16,7 +16,7 @@ function Hotel() {
 
   const handleSubmit = ()=>{
     // event.preventDefault("");
-    axios.post("http://localhost:3000/pub", {pub, })
+    axios.post("https://breradph-bac.vercel.app/pub", {pub, })
     .then(res => {console.log(res);
       // Navigate("/Pageacceuille");
     })
@@ -25,7 +25,7 @@ function Hotel() {
 
   const handleDelete = async (id)=>{
     try{
-      await axios.delete("http://localhost:3000/pub/"+id)
+      await axios.delete("https://breradph-bac.vercel.app/pub/"+id)
       // window.location.reload()
     }catch(err){
       console.log(err)
